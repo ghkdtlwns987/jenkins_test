@@ -43,12 +43,3 @@ implementation 'mysql:mysql-connector-java' // MySql
 tasks.named('test'){
 useJUnitPlatform()
 }
-
-
-bootJar{
-   mainClassName = 'com.LinkT.MH.MhApplication'
-}
-bootRun{
-   String activeProfile = System.properties['spring.profiles.active']
-   systemProperty "spring.profiles.active", activeProfile
-}
